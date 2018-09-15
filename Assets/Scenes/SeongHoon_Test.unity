@@ -227,6 +227,7 @@ MonoBehaviour:
   moveDir: {x: -1, y: 0}
   moveAccel: 2
   nextHuddle: {fileID: 1774688047}
+  distance: 4
 --- !u!54 &45277884
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -391,7 +392,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 389019231}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.25, y: 1.04, z: -5}
+  m_LocalPosition: {x: -4.43, y: 1.03, z: -5}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 0}
@@ -731,6 +732,7 @@ MonoBehaviour:
   moveDir: {x: -1, y: 0}
   moveAccel: 2
   nextHuddle: {fileID: 45277877}
+  distance: 4
 --- !u!54 &1772249317
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -860,6 +862,7 @@ MonoBehaviour:
   moveDir: {x: -1, y: 0}
   moveAccel: 2
   nextHuddle: {fileID: 1772249310}
+  distance: 4
 --- !u!54 &1774688054
 Rigidbody:
   m_ObjectHideFlags: 0

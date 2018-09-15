@@ -303,7 +303,7 @@
     <Compile Include="Assets\Scripts\DefaultCollision.cs" />
     <Compile Include="Assets\Scripts\DefaultHuddleMove.cs" />
     <Compile Include="Assets\Scripts\title.cs" />
-    <Compile Include="Assets\TouchToBlock.cs" />
+    <Compile Include="Assets\Scripts\TouchToBlock.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\Glow.shader" />
