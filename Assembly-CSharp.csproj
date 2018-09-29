@@ -66,8 +66,10 @@
     <Compile Include="Assets\Scripts\DefaultCollision.cs" />
     <Compile Include="Assets\Scripts\DefaultHuddleMove.cs" />
     <Compile Include="Assets\Scripts\DefaultSetHeight.cs" />
+    <Compile Include="Assets\Scripts\gameManager.cs" />
     <Compile Include="Assets\Scripts\title.cs" />
     <Compile Include="Assets\Scripts\TouchToBlock.cs" />
+    <Compile Include="Assets\Scripts\WideHuddlePatern.cs" />
     <None Include="Assets\_MK\MKGlowFree\Shader\Variants_SelectiveMode\Illumin\MK_Illumin-Glossy.shader" />
     <None Include="Assets\_MK\MKGlowFree\Shader\Render\MKGlowBlurInc.cginc" />
     <None Include="Assets\_MK\MKGlowFree\Shader\Variants_SelectiveMode\Cutout\MK_Cutout-Glossy.shader" />
