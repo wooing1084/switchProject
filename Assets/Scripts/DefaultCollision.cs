@@ -17,6 +17,7 @@ public class DefaultCollision : MonoBehaviour {
         {
             UnityEngine.Debug.Log("벽과 충돌");
             //게임오버 씬 전환부분
+            ball.SetActive(false);
         }
     }
 

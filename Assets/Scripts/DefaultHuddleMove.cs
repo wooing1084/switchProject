@@ -85,10 +85,13 @@ public class DefaultHuddleMove : MonoBehaviour {
     {
         if (!isScored)
         {
-            if ((this.transform.position.x + this.transform.lossyScale.x) < ball.transform.position.x)
+            if (ball.activeSelf)
             {
-                gameManager.instance.AddScore(1);
-                isScored = true;
+                if ((this.transform.position.x + this.transform.lossyScale.x) < ball.transform.position.x)
+                {
+                    gameManager.instance.AddScore(1);
+                    isScored = true;
+                }
             }
         }
     }
