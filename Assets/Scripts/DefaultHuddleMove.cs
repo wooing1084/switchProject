@@ -9,20 +9,17 @@ public class DefaultHuddleMove : MonoBehaviour {
     //허들들 사이의 간격을 3
 
     //허들 타입
-    public enum HuddleType { Default, Wide, END };
+    public enum HuddleType { Default };
 
     public Vector2 moveDir = new Vector2(-1,0);
     public float moveAccel = 2.0f;
     public GameObject nextHuddle;                   //다음장애물
     public float distance = 4.0f;
     public HuddleType type;
-    public bool isScored = false;                   //공이 장애물을 넘었는지 체크(포지션이 재설정 될때 false로 다시 바뀜)  
-
-    private GameObject ball;
 
 	// Use this for initialization
 	void Start () {
-        ball = GameObject.Find("ball");
+		
 	}
    
 	// Update is called once per frame
@@ -36,63 +33,20 @@ public class DefaultHuddleMove : MonoBehaviour {
         if (range.x < 0f)
         {
             Vector3 pos = this.transform.position;
-            pos.x = nextHuddle.transform.position.x + distance + nextHuddle.transform.localScale.x;
+            pos.x = nextHuddle.transform.position.x + distance;
             this.transform.position = pos;
-            this.isScored = false;
-
-
-            
-            type =( HuddleType)Random.Range(0,(int)HuddleType.END);
-            if(type == HuddleType.Default)
-            {
-                SetDefaultScale();
-            }
 
             //타입별로 스크립트 생성하여 GetComponent<클래스이름>().함수 사용하면 됨
             //타입 만들때 마다 enum에 추가
             switch (type)
             {
                 case HuddleType.Default:
-                    GameObject.Find("ScriptCollector").GetComponent<DefaultSetHeight>().SetHeight(this.gameObject,nextHuddle,5);
-                    break;
-                case HuddleType.Wide:
-                    GameObject.Find("ScriptCollector").GetComponent<DefaultSetHeight>().SetHeight(this.gameObject, nextHuddle, 5);
-                    GameObject.Find("ScriptCollector").GetComponent<WideHuddlePatern>().SetWidth(this.gameObject,3.0f);
+                    this.GetComponent<DefaultSetHeight>().SetHeight();
                     break;
                 default:
                     break;
             }
             
         }
-
-        //공을 지나갔는지 체크
-        CheckBallPassed();
-
-    }
-
-    private void SetDefaultScale()
-    {
-        Vector3 scaleVec = this.transform.localScale;
-
-        scaleVec.x = 0.5f;
-        scaleVec.y = 6;
-        scaleVec.z = 1;
-        // me.
-        this.transform.localScale = scaleVec;
-    }
-
-    private void CheckBallPassed()
-    {
-        if (!isScored)
-        {
-            if (ball.activeSelf)
-            {
-                if ((this.transform.position.x + this.transform.lossyScale.x) < ball.transform.position.x)
-                {
-                    gameManager.instance.AddScore(1);
-                    isScored = true;
-                }
-            }
-        }
-    }
+	}
 }
