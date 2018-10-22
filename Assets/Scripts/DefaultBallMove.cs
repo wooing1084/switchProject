@@ -30,6 +30,6 @@ public class DefaultBallMove : MonoBehaviour {
         this.transform.Translate(moveDir * (moveSpeed) * Time.deltaTime, Space.World);
         moveSpeed += moveAccel;
 
-    }
-
+       	
+	}
 }
