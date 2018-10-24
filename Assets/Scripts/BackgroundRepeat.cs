@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BackgroundRepeat : MonoBehaviour {
-    public const float scrollSpeed = 1.2f;
+    public const float scrollSpeed = 0.1f;
     //스크롤할 속도를 상수로 지정
     private Material thisMaterial;
     //Quad의 Material 데이터를 받아올 객체를 선언
