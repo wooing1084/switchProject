@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class DefaultSetHeight : MonoBehaviour {
 
-    public GameObject beforeObject;
-    public float range;
-
 	// Use this for initialization
 	void Start () {
 		
@@ -17,16 +14,16 @@ public class DefaultSetHeight : MonoBehaviour {
 		
 	}
 
-    public void SetHeight()
+    public void SetHeight(GameObject me,GameObject beforeObject, float range)
     {
-        Vector3 pos = this.transform.position;
+        Vector3 pos = me.transform.position;
         float min = beforeObject.transform.position.y - range;
         float max = beforeObject.transform.position.y + range;
-        if (min < 0)
-            min = 0;
-        if (max > 5.0f)
-            max = 5.0f;
+        if (min < -5.0)
+            min = -5.0f;
+        if (max > 0.0f)
+            max = 0.0f;
         pos.y = Random.Range(min, max);
-        this.transform.position = pos;
+        me.transform.position = pos;
     }
 }

@@ -13,14 +13,20 @@ public class DefaultCollision : MonoBehaviour {
 
     private void OnTriggerEnter(Collider col)
     {
-        if(col.gameObject == ball)
+        if (col.gameObject == ball)
+        {
             UnityEngine.Debug.Log("벽과 충돌");
+            //게임오버 씬 전환부분
+            ball.SetActive(false);
+        }
     }
 
     private void OnTriggerExit(Collider col)
     {
         if (col.gameObject == ball)
+        {
             UnityEngine.Debug.Log("벽과 충돌에서 나옴");
+        }
     }
 
     // Update is called once per frame
