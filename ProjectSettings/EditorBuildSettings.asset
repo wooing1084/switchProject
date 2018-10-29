@@ -1,0 +1,14 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/TaeMin_Test.unity
+    guid: b9f7cb9d7282681498cd2e99e95dcd59
+  - enabled: 1
+    path: Assets/Scenes/Guitar2_Test.unity
+    guid: 31e203802c144ae44bbe9f808ece69de
+  m_configObjects: {}
