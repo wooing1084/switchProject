@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\SeongHoon\DefaultSetHeight.cs" />
     <Compile Include="Assets\Scripts\SeongHoon\gameManager.cs" />
     <Compile Include="Assets\Scripts\SeongHoon\GlobalVariable.cs" />
+    <Compile Include="Assets\Scripts\SeongHoon\SaveNLoad.cs" />
     <Compile Include="Assets\Scripts\SeongHoon\WideHuddlePatern.cs" />
     <Compile Include="Assets\Scripts\TaeMin\BackgroundRepeat.cs" />
     <Compile Include="Assets\Scripts\TaeMin\backgroundtest1.cs" />

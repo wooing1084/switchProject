@@ -13,8 +13,6 @@ public class DefaultBallMove : MonoBehaviour {
         moveSpeed = initSpeed = 1.5f;
         moveDir.x = 0; moveDir.y = 1;
         moveAccel =  0.1f;
-
-        int a= GlobalVariable.coin;
     }
 	
 	// Update is called once per frame
