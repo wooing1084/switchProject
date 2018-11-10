@@ -10,7 +10,7 @@ public class CoinFst : MonoBehaviour
     /*int sum1 = GlobalVariable.coin;   
     int sum2 = GlobalVariable.coin;
     int sum3 = GlobalVariable.coin;*/
-    int coin = GlobalVariable.coin;
+    int coin = GlobalVariable.data.coin;
 
     // Use this for initialization
     void Start()
