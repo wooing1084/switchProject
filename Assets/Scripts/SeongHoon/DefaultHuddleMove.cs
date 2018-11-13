@@ -14,16 +14,25 @@ public class DefaultHuddleMove : MonoBehaviour {
     public Vector2 moveDir = new Vector2(-1,0);
     public float moveAccel = 2.0f;
     public GameObject nextHuddle;                   //다음장애물
-    public float distance = 4.0f;
+    public float distance = 4.0f;                   //다음 장애물과의 거리
     public HuddleType type;
     public bool isScored = false;                   //공이 장애물을 넘었는지 체크(포지션이 재설정 될때 false로 다시 바뀜)  
+    public float betweenDis = 1.5f;                 //허들 위아래 너비
 
     private GameObject ball;
+    private GameObject childHuddle;                 //자식 허들
 
 	// Use this for initialization
 	void Start () {
         ball = GameObject.Find("ball");
-	}
+        childHuddle = this.transform.GetChild(0).gameObject;
+
+        //this.transform.position.y + 
+        Vector3 pos = childHuddle.transform.localPosition;
+        pos.y = betweenDis;
+        childHuddle.transform.localPosition = pos;
+
+    }
    
 	// Update is called once per frame
 	void Update () {
@@ -31,6 +40,8 @@ public class DefaultHuddleMove : MonoBehaviour {
 
         //카메라의 뷰 포트의 상대좌표로 어디에 위치해있는지 구함(오브젝트 위치 + 가로너비(이유는 박스 오른쪽이 화면에 나갔을 때가 나간것이기 때문))
         Vector3 range = Camera.main.WorldToViewportPoint(this.transform.position + new Vector3(this.transform.localScale.x,0,0));
+
+
 
         //맵밖으로 나가면 포지션 재설정
         if (range.x < 0f)
@@ -40,8 +51,10 @@ public class DefaultHuddleMove : MonoBehaviour {
             this.transform.position = pos;
             this.isScored = false;
 
+            pos = childHuddle.transform.localPosition;
+            pos.y = betweenDis;
+            childHuddle.transform.localPosition = pos;
 
-            
             type =( HuddleType)Random.Range(0,(int)HuddleType.END);
             if(type == HuddleType.Default)
             {
@@ -53,16 +66,15 @@ public class DefaultHuddleMove : MonoBehaviour {
             switch (type)
             {
                 case HuddleType.Default:
-                    GameObject.Find("ScriptCollector").GetComponent<DefaultSetHeight>().SetHeight(this.gameObject,nextHuddle,5);
+                    GameObject.Find("ScriptCollector").GetComponent<DefaultSetHeight>().SetHeight(this.gameObject,nextHuddle,5,betweenDis);
                     break;
                 case HuddleType.Wide:
-                    GameObject.Find("ScriptCollector").GetComponent<DefaultSetHeight>().SetHeight(this.gameObject, nextHuddle, 5);
+                    GameObject.Find("ScriptCollector").GetComponent<DefaultSetHeight>().SetHeight(this.gameObject, nextHuddle, 5, betweenDis);
                     GameObject.Find("ScriptCollector").GetComponent<WideHuddlePatern>().SetWidth(this.gameObject,3.0f);
                     break;
                 default:
                     break;
-            }
-            
+            }     
         }
 
         //공을 지나갔는지 체크
