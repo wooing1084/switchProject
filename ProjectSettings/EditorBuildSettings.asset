@@ -8,7 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TaeMin_Test.unity
     guid: b9f7cb9d7282681498cd2e99e95dcd59
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Guitar2_Test.unity
     guid: 31e203802c144ae44bbe9f808ece69de
+  - enabled: 1
+    path: Assets/Scenes/TaeMin_Test_Score.unity
+    guid: fd4a2bd7bfb16094e8550fb167a842e2
+  - enabled: 1
+    path: Assets/Scenes/Guitar_END.unity
+    guid: 00a24b999ca70af4f8d088640a66528d
   m_configObjects: {}

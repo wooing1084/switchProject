@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class gameManager : MonoBehaviour {
+public class GameMNG : MonoBehaviour {
 
     private int score = 0;          //점수
-    public static gameManager instance;
+    public static GameMNG instance2;
     public Text scoreText;
 
     private void Awake()
     {
-        if (!instance)
-            instance = this;
+        if (!instance2)
+            instance2 = this;
     }
 
     // Use this for initialization
@@ -29,7 +29,6 @@ public class gameManager : MonoBehaviour {
     public void AddScore(int val)
     {
         score += val;
-        //scoreText.text = "Score: " + score;
-        scoreText.text = "" + score;
+        scoreText.text = "Score: " + score;
     }
 }
