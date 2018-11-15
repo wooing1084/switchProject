@@ -14,15 +14,15 @@ public class DefaultSetHeight : MonoBehaviour {
 		
 	}
 
-    public void SetHeight(GameObject me,GameObject beforeObject, float range)
+    public void SetHeight(GameObject me,GameObject beforeObject, float range,float dis)
     {
         Vector3 pos = me.transform.position;
         float min = beforeObject.transform.position.y - range;
         float max = beforeObject.transform.position.y + range;
         if (min < -5.0)
             min = -5.0f;
-        if (max > 0.0f)
-            max = 0.0f;
+        if (max > -dis + 0.15f)
+            max = -dis + 0.15f;
         pos.y = Random.Range(min, max);
         me.transform.position = pos;
     }
