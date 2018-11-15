@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_MK\MKGlowFree\MKGlowFree.cs" />
+    <Compile Include="Assets\Initialization.cs" />
     <Compile Include="Assets\Move.cs" />
     <Compile Include="Assets\NeonShapes\SelfDestroyScript.cs" />
     <Compile Include="Assets\Scripts\SeongHoon\DefaultBallMove.cs" />
