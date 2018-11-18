@@ -12,10 +12,12 @@ public class FadeScript : MonoBehaviour
     private float start = 0f;
     private float end = 1f;
     private float time = 0f;
+    private int playCount = 1;
 
     void Start()
     {
         ball = GameObject.FindGameObjectWithTag("Player");
+        playCount = 1;
     }
 
     void Awake()
@@ -27,7 +29,24 @@ public class FadeScript : MonoBehaviour
     {
         if (ball.activeSelf == false)
         {
+            PlayFadeOut();
+        }
+
+        if(playCount == 1)
+        {
             PlayFadeIn();
+        }
+    }
+
+    void PlayFadeOut()
+    {
+        time += Time.deltaTime;
+        Color color = fade.color;
+        color.a = Mathf.Lerp(start, end, time);
+        fade.color = color;
+        if (color.a == 1f)
+        {
+            SceneManager.LoadScene(2);
         }
     }
 
@@ -35,11 +54,12 @@ public class FadeScript : MonoBehaviour
     {
         time += Time.deltaTime;
         Color color = fade.color;
-        color.a = Mathf.Lerp(start, end, time * 2);
+        color.a = Mathf.Lerp(1f, 0f, time);
         fade.color = color;
-        if (color.a == 1f)
+        if (time > 1.0f)
         {
-            SceneManager.LoadScene(2);
+            playCount = 0;
+            time = 0f;
         }
     }
 }
