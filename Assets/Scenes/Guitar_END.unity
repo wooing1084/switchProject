@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1781,11 +1781,11 @@ MonoBehaviour:
   glowLayer:
     serializedVersion: 2
     m_Bits: 4294967295
-  glowType: 0
+  glowType: 1
   glowTint: {r: 1, g: 1, b: 1, a: 0}
   blurSpreadInner: 0
   blurIterations: 5
-  glowIntensityInner: 0.132
+  glowIntensityInner: 0.125
   samples: 2
 --- !u!114 &1658204443
 MonoBehaviour:
