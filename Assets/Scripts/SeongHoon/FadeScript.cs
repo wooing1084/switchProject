@@ -7,10 +7,9 @@ using UnityEngine.SceneManagement;
 public class FadeScript : MonoBehaviour
 {
     private Image fade;
+    private Text Score;
     GameObject ball;
 
-    private float start = 0f;
-    private float end = 1f;
     private float time = 0f;
     private int playCount = 1;
 
@@ -23,6 +22,7 @@ public class FadeScript : MonoBehaviour
     void Awake()
     {
         fade = GetComponent<Image>();
+        Score = GetComponent<Text>();
     }
 
     void Update()
@@ -42,7 +42,7 @@ public class FadeScript : MonoBehaviour
     {
         time += Time.deltaTime;
         Color color = fade.color;
-        color.a = Mathf.Lerp(start, end, time);
+        color.a = Mathf.Lerp(0f, 1f, time);
         fade.color = color;
         if (color.a == 1f)
         {

@@ -11,6 +11,7 @@ public class Score_Manager : MonoBehaviour {
     void Awake()
     {
         Score = GetComponent<Text>();
+        Score.text = befScore.ToString();
     }
 
     void Update()
@@ -18,8 +19,8 @@ public class Score_Manager : MonoBehaviour {
         if (Input.GetKey(KeyCode.B))      //테스트용 B키 입력시 점수증가
         {
             befScore = befScore + 10;
+            Score.text = befScore.ToString();
         }
-        Score.text = befScore.ToString();
     }
 
 }
