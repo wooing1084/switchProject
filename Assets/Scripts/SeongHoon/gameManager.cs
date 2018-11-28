@@ -26,16 +26,17 @@ public class gameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Score.transform.position.y > 380f){
+        if (Score.transform.position.y > -50f)
+        {
             Score.transform.Translate(new Vector2(0, -3));
         }
     }
 
     //점수추가
-    public void AddScore(int val)
+    /*public void AddScore(int val)
     {
         score += val;
         //scoreText.text = "Score: " + score;
         scoreText.text = "" + score;
-    }
+    }*/
 }
