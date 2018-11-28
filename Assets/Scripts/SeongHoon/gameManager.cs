@@ -33,10 +33,10 @@ public class gameManager : MonoBehaviour {
     }
 
     //점수추가
-    /*public void AddScore(int val)
+    public void AddScore(int val)
     {
         score += val;
         //scoreText.text = "Score: " + score;
         scoreText.text = "" + score;
-    }*/
+    }
 }
