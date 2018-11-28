@@ -9,7 +9,7 @@ public class DefaultHuddleMove : MonoBehaviour {
     //허들들 사이의 간격을 3
 
     //허들 타입
-    public enum HuddleType { Default, Wide, END };
+    public enum HuddleType { Default, Wide, Lean, END };
 
     public Vector2 moveDir = new Vector2(-1,0);
     public float moveAccel = 2.0f;
@@ -55,6 +55,9 @@ public class DefaultHuddleMove : MonoBehaviour {
             pos.y = betweenDis;
             childHuddle.transform.localPosition = pos;
 
+            //이전 허들 타입에 따른 변화 초기화
+            this.transform.Rotate(0, 0, 0, Space.World);
+
             type =( HuddleType)Random.Range(0,(int)HuddleType.END);
             if(type == HuddleType.Default)
             {
@@ -71,6 +74,13 @@ public class DefaultHuddleMove : MonoBehaviour {
                 case HuddleType.Wide:
                     GameObject.Find("ScriptCollector").GetComponent<DefaultSetHeight>().SetHeight(this.gameObject, nextHuddle, 5, betweenDis);
                     GameObject.Find("ScriptCollector").GetComponent<WideHuddlePatern>().SetWidth(this.gameObject,3.0f);
+                    break;
+                case HuddleType.Lean:
+                    GameObject.Find("ScriptCollector").GetComponent<DefaultSetHeight>().SetHeight(this.gameObject, nextHuddle, 3, betweenDis);
+                    GameObject.Find("ScriptCollector").GetComponent<WideHuddlePatern>().SetWidth(this.gameObject, 3.0f);
+                    GameObject.Find("ScriptCollector").GetComponent<LeanHuddle>().SetRotate(this.gameObject, 25, -25);
+
+
                     break;
                 default:
                     break;

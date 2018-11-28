@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 49061339}
   - component: {fileID: 49061338}
   - component: {fileID: 49061341}
+  - component: {fileID: 49061342}
   m_Layer: 0
   m_Name: ScriptCollector
   m_TagString: Untagged
@@ -175,6 +176,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04ec30d1b3749394390124f12a3893ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &49061342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 49061337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5b75125cac139242886923906cad503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &59116657
@@ -286,6 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa8ad0207ad19834596b857f3595e5d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Blueblast: {fileID: 0}
 --- !u!65 &336813718
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -431,6 +444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa8ad0207ad19834596b857f3595e5d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Blueblast: {fileID: 0}
 --- !u!65 &658844562
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -532,6 +546,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa8ad0207ad19834596b857f3595e5d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Blueblast: {fileID: 0}
 --- !u!65 &707564776
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -665,6 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa8ad0207ad19834596b857f3595e5d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Blueblast: {fileID: 0}
 --- !u!65 &732393595
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -822,6 +838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa8ad0207ad19834596b857f3595e5d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Blueblast: {fileID: 0}
 --- !u!23 &1366007991
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -998,6 +1015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa8ad0207ad19834596b857f3595e5d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Blueblast: {fileID: 0}
 --- !u!65 &1666859459
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1259,7 +1277,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1936644380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.43, y: 1.03, z: -5}
+  m_LocalPosition: {x: -5.16, y: 1.03, z: -5}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1336,7 +1354,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1938860878}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.74, y: 1, z: -10.47}
+  m_LocalPosition: {x: -0.74, y: 1, z: -11.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
