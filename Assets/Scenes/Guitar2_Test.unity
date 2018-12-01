@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 115656218}
   - component: {fileID: 115656217}
   - component: {fileID: 115656216}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: BlueBlast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -464,7 +464,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2.8
+      scalar: 0.1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4757,11 +4757,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 115656215}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.566, y: 2.4299998, z: -2.392}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &232350284
 GameObject:
@@ -4872,7 +4872,7 @@ GameObject:
   - component: {fileID: 246427993}
   - component: {fileID: 246427992}
   - component: {fileID: 246427991}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Huddle3Bot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4990,7 +4990,7 @@ Transform:
   m_Children:
   - {fileID: 344551873}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &344551872
 GameObject:
@@ -5005,7 +5005,7 @@ GameObject:
   - component: {fileID: 344551876}
   - component: {fileID: 344551875}
   - component: {fileID: 344551874}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Huddle3Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5259,7 +5259,7 @@ GameObject:
   - component: {fileID: 822920205}
   - component: {fileID: 822920204}
   - component: {fileID: 822920203}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ball
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5364,7 +5364,7 @@ Transform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &871087033
 GameObject:
@@ -5379,7 +5379,7 @@ GameObject:
   - component: {fileID: 871087037}
   - component: {fileID: 871087036}
   - component: {fileID: 871087035}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Huddle1Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5494,7 +5494,7 @@ GameObject:
   - component: {fileID: 880662843}
   - component: {fileID: 880662842}
   - component: {fileID: 880662841}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Huddle2Bot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5612,7 +5612,7 @@ Transform:
   m_Children:
   - {fileID: 1661364010}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &967441534
 GameObject:
@@ -5708,10 +5708,10 @@ Transform:
   m_GameObject: {fileID: 967441534}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.4, y: 1, z: 191}
-  m_LocalScale: {x: 315, y: 240, z: 100}
+  m_LocalScale: {x: 500, y: 300, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &971644371
 GameObject:
@@ -5724,6 +5724,8 @@ GameObject:
   - component: {fileID: 971644374}
   - component: {fileID: 971644373}
   - component: {fileID: 971644372}
+  - component: {fileID: 971644377}
+  - component: {fileID: 971644376}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5751,12 +5753,12 @@ MonoBehaviour:
     type: 3}
   glowLayer:
     serializedVersion: 2
-    m_Bits: 4294967295
-  glowType: 1
+    m_Bits: 4096
+  glowType: 0
   glowTint: {r: 1, g: 1, b: 1, a: 0}
-  blurSpreadInner: 0.6
+  blurSpreadInner: 0.8
   blurIterations: 5
-  glowIntensityInner: 0.125
+  glowIntensityInner: 0.14
   samples: 2
 --- !u!81 &971644373
 AudioListener:
@@ -5773,7 +5775,7 @@ Camera:
   m_GameObject: {fileID: 971644371}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
@@ -5814,10 +5816,25 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.74, y: 1, z: -10.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1269763410}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!124 &971644376
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 971644371}
+  m_Enabled: 1
+--- !u!92 &971644377
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 971644371}
+  m_Enabled: 1
 --- !u!1 &1043282730
 GameObject:
   m_ObjectHideFlags: 0
@@ -5897,19 +5914,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d7f54c56432ff94aa85c146c7565160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 628572656}
+  scoreText: {fileID: 0}
 --- !u!4 &1269763410
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1269763408}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 568.01636, y: 189.78915, z: -552.745}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 568.75635, y: 188.78915, z: -542.275}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 971644375}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1661364009
 GameObject:
@@ -5924,7 +5941,7 @@ GameObject:
   - component: {fileID: 1661364013}
   - component: {fileID: 1661364012}
   - component: {fileID: 1661364011}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Huddle2Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6166,7 +6183,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1823723678
 GameObject:
@@ -6182,7 +6199,7 @@ GameObject:
   - component: {fileID: 1823723681}
   - component: {fileID: 1823723680}
   - component: {fileID: 1823723679}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Huddle1Bot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6300,5 +6317,5 @@ Transform:
   m_Children:
   - {fileID: 871087034}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
