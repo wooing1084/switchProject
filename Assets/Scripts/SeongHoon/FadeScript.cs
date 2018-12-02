@@ -9,6 +9,7 @@ public class FadeScript : MonoBehaviour
     private Image fade;
     private Text Score;
     GameObject ball;
+    GameObject fade2;
 
     private float time = 0f;
     private int playCount = 1;
@@ -16,6 +17,7 @@ public class FadeScript : MonoBehaviour
     void Start()
     {
         ball = GameObject.FindGameObjectWithTag("Player");
+        fade2 = GameObject.FindGameObjectWithTag("UI");
         playCount = 1;
     }
 
@@ -60,6 +62,15 @@ public class FadeScript : MonoBehaviour
         {
             playCount = 0;
             time = 0f;
+        }
+
+        if(color.a == 0f)
+        {
+            if (fade2.activeSelf == true && SceneManager.GetActiveScene().buildIndex == 0)
+            {
+                fade2.SetActive(false);
+            }
+
         }
     }
 }

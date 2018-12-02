@@ -16,9 +16,9 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
+  - BackGround
+  - UIs
+  - Fade
   - 
   - 
   - 
@@ -42,4 +42,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UIs
+    uniqueID: 2289316981
+    locked: 0
+  - name: Fade
+    uniqueID: 1235944091
     locked: 0

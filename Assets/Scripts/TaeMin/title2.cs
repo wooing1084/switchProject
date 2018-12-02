@@ -18,6 +18,6 @@ public class title2 : MonoBehaviour {
 
     public void Click()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 }

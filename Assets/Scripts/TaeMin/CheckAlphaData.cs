@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class CheckAlphaData : MonoBehaviour {
@@ -18,9 +19,9 @@ public class CheckAlphaData : MonoBehaviour {
 	void Update () {
         Color color = fade.color;
         alphaData = color.a;
-        if (alphaData == 0f)
+        if (alphaData == 0f && SceneManager.GetActiveScene().buildIndex==2)
         {
             fade2.SetActive(false);
         }
-	}
+    }
 }
