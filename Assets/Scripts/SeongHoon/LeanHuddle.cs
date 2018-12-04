@@ -14,16 +14,10 @@ public class LeanHuddle : MonoBehaviour {
 		
 	}
 
-    public void SetRotate(GameObject me,float Maxangle,float MinAngle)
+    public void SetRotate(GameObject me)
     {
-        if (Maxangle >= 15)
-            Maxangle = 15.0f;
-        else if (MinAngle <= -15.0f)
-            MinAngle = -15.0f;
-
-        float angle = Random.Range(MinAngle, Maxangle);
-
-
+        float angle = Random.Range(10.0f, -10.0f);
+        
         me.transform.Rotate(0, 0, angle, Space.World);
     }
 }

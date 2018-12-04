@@ -34,10 +34,14 @@ public class WideHuddlePatern : MonoBehaviour {
         float max = 1 + widthRange;
         if (max > 5.0f)
             max = 5.0f;
-        scaleVec.x = Random.Range(min, max);
+        float scale = Random.Range(min, max);
+        scaleVec.x = scale;
         scaleVec.y = 6;
         scaleVec.z = 1;
-       // me.
+        // me.
         me.transform.localScale = scaleVec;
+        Vector3 pos = me.transform.position;
+        pos.x += scale / 2;
+        me.transform.position = pos;
     }
 }

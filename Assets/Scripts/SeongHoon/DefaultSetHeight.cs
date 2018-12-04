@@ -14,15 +14,16 @@ public class DefaultSetHeight : MonoBehaviour {
 		
 	}
 
-    public void SetHeight(GameObject me,GameObject beforeObject, float range,float dis)
+    public void SetHeight(GameObject me,float beforeHuddleY, float range,float dis)
     {
         Vector3 pos = me.transform.position;
-        float min = beforeObject.transform.position.y - range;
-        float max = beforeObject.transform.position.y + range;
-        if (min < -5.0)
+        float min = beforeHuddleY - range;
+        float max = beforeHuddleY + range;
+        //최대 -2, 최소 -5
+        if (max > -2.0f)
+            max = -2.0f;
+        if (min < -5.0f)
             min = -5.0f;
-        if (max > -dis + 0.15f)
-            max = -dis + 0.15f;
         pos.y = Random.Range(min, max);
         me.transform.position = pos;
     }
