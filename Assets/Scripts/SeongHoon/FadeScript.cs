@@ -66,7 +66,7 @@ public class FadeScript : MonoBehaviour
 
         if(color.a == 0f)
         {
-            if (fade2.activeSelf == true && SceneManager.GetActiveScene().buildIndex == 0)
+            if (fade2.activeSelf == true && SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().buildIndex == 2)
             {
                 fade2.SetActive(false);
             }

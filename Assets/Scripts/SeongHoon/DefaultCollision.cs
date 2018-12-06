@@ -6,7 +6,6 @@ public class DefaultCollision : MonoBehaviour
 {
 
     public ParticleSystem Blueblast;
-
     GameObject ball;
 
 
@@ -19,8 +18,6 @@ public class DefaultCollision : MonoBehaviour
 
         ball = GameObject.FindGameObjectWithTag("Player");
     }
-
-
     private void OnTriggerEnter(Collider col)
     {
         if (col.gameObject == ball)
@@ -32,7 +29,9 @@ public class DefaultCollision : MonoBehaviour
             Blueblast.transform.position = ball.transform.position;
             //볼이 장애물의 위치에 닿았을 때, 닿은 위치를 파티클 위치에 담는다.
             Blueblast.Play();
-
+            GameObject.Find("CoinConverter").GetComponent<CoinConvert>().Convert(GameObject.Find("GameManager").GetComponent<gameManager>().score);
+            //CoinConvert.Convert(GameObject.Find("GameManager").GetComponent<gameManager>().score);
+            GameObject.Find("ScriptCollector").GetComponent<SaveNLoad>().SaveAll();
             ball.SetActive(false);
             //공 사라짐
 

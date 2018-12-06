@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 //BinaryFormatter사용하기 위함
 using System;
@@ -9,6 +11,7 @@ using System.IO;
 
 public class SaveNLoad : MonoBehaviour
 {
+
     //모든 데이터 저장
     public void SaveAll()
     {
@@ -46,22 +49,8 @@ public class SaveNLoad : MonoBehaviour
         file.Close();
 
     }
-
-    void Update()
+    void Awake()
     {
-        if(Input.GetKeyDown(KeyCode.S))
-        {
-            GlobalVariable.data.coin = 7;
-            GlobalVariable.data.highestScore = 8;
-            SaveAll();
-            GlobalVariable.data.coin = 9;
-            GlobalVariable.data.highestScore = 6;
-        }
-        else if (Input.GetKeyDown(KeyCode.L))
-        {
-            LoadAll();
-            int a =GlobalVariable.data.coin;
-        }
+        LoadAll();
     }
-
 }

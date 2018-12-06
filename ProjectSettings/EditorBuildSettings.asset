@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainGameScene.unity
     guid: 453003d38b516e349b71516af73129e1
   - enabled: 1
-    path: Assets/Scenes/Guitar_END.unity
-    guid: 00a24b999ca70af4f8d088640a66528d
+    path: Assets/Scenes/TaeMin_END.unity
+    guid: 6648355914d6a8a4aa52761a098d88b9
   m_configObjects: {}
