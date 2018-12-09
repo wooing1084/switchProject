@@ -26,9 +26,9 @@ public class gameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Score.transform.position.y > -50f)
+        if (Score.transform.position.y > 1000f)
         {
-            Score.transform.Translate(new Vector2(0, -3));
+            Score.transform.Translate(new Vector2(0, -6));
         }
     }
 
